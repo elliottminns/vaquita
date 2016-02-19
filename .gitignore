@@ -1,0 +1,12 @@
+Packages
+.build
+Sources/main.swift
+Public
+Resources
+.DS_Store
+Carthage/
+Xcode/Vaquita.xcodeproj/project.xcworkspace/xcuserdata/
+Xcode/Vaquita.xcodeproj/project.xcworkspace/xcshareddata/
+Xcode/Vaquita.xcodeproj/xcuserdata/
+*.swp
+Data/
