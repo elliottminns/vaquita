@@ -23,6 +23,10 @@ enum EncodingError: ErrorType {
 public struct Data {
 
     let bytes: [UInt8]
+
+    public var size: Int {
+        return self.bytes.count * sizeof(UInt8)
+    }
     
     public init(bytes: [UInt8]) {
         self.bytes = bytes
@@ -43,9 +47,4 @@ public struct Data {
         
         return str
     }
-
-    public func size() -> Int {
-        return self.bytes.count * sizeof(UInt8)
-    }
-
 }

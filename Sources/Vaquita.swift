@@ -96,7 +96,7 @@ public class Vaquita {
             throw FileError.OpenFailed
         }
         let string = try data.toString()
-        fwrite(string, 1, data.size(), fileptr)
+        fwrite(string, 1, data.size, fileptr)
         fclose(fileptr)
     }
 }
