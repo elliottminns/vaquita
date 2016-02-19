@@ -20,19 +20,20 @@ enum EncodingError: ErrorType {
     case Failed
 }
 
-public class Data {
+public struct Data {
 
-    var bytes: [UInt8]
+    let bytes: [UInt8]
     
-    init(bytes: [UInt8]) {
+    public init(bytes: [UInt8]) {
         self.bytes = bytes
     }
 
-    init(string: String) {
+    public init(string: String) {
         self.bytes = UInt8.fromString(string)
     }
 
-    func toString() throws -> String {
+    public func toString() throws -> String {
+        var bytes = self.bytes
         guard let str = String(bytesNoCopy: &bytes, 
             length: bytes.count * sizeof(UInt8), 
             encoding: UInt8.encodingType.encoding,
@@ -43,7 +44,7 @@ public class Data {
         return str
     }
 
-    func size() -> Int {
+    public func size() -> Int {
         return self.bytes.count * sizeof(UInt8)
     }
 
