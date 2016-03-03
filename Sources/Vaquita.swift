@@ -35,7 +35,7 @@ public enum FileError: ErrorType {
     case OpenFailed
 }
 
-public class Vaquita {
+public class FileSystem {
 
     static let fileQueue = dispatch_queue_create("com.vaquita.file", 
                                                  DISPATCH_QUEUE_SERIAL)
